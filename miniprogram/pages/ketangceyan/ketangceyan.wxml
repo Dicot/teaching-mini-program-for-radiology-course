@@ -1,0 +1,30 @@
+<!--miniprogram/pages/marry/marry.wxml-->
+<view wx:if="{{isceyan}}" class="content">
+
+  <text class="miaosu">当前日期：{{time}}\n</text>
+  <text class="miaosu">
+  
+  {{ceyanmiaosu}}</text>
+ 
+  <image  bindtap="previewimg" mode="aspectFit" src='{{photopath}}' data-url='{{photopath}}'></image>
+    <view >
+      <view>
+         <input  class='inputbox' type='text' placeholder="说点什么吧~" value="{{textContent}}"  bindinput='contentinput' auto-focus/>
+      </view>
+
+      </view>
+
+      
+
+    <view class='btn-func'>
+    <text>\n\n
+    </text>
+      <button class="btn" bindtap='ontapsubmit'>提交</button>
+      <!-- <image hidden=''></image> -->
+    </view>
+
+
+</view>
+<view hidden="{{isceyan}}">
+<text>预习尚未开始或预习口令错误，请重试</text>
+</view>

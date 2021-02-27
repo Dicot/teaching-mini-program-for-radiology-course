@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class="container">
+<view class="swiper-container">
+
+ <swiper class="swiperdot" 
+  autoplay='true' interval='5000' duration='1000'>
+
+    <swiper-item>
+  <image src="{{tongzhi0.photopath}}"  data-index="0"   mode="widthFix"></image>
+  <view wx:if="{{tongzhi0.neirong}}"><text>【通知】{{tongzhi0.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi1.photopath}}"  data-index="1"   mode="widthFix"></image>
+  <view wx:if="{{tongzhi1.neirong}}"><text>【通知】{{tongzhi1.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi2.photopath}}"  data-index="2"   mode="widthFix"></image>
+  <view wx:if="{{tongzhi2.neirong}}"><text>【通知】{{tongzhi2.neirong}}</text></view>
+    </swiper-item>
+
+</swiper>
+</view>
+<modal id="modal" hidden="{{tongzhihidden}}" title="通知" confirm-text="确认" cancel-text="取消"         bindcancel="tongzhicancel" bindconfirm="tongzhi1confirm">
+  <text>{{title}}\n</text>     
+  
+  <text>{{neirong}}</text>
+</modal>
+
+<text class='xinxifabu'>信息发布</text>
+<image class="zi11" bindtap="ontapfabuqiandao" src="../../images/zi11.png"></image>
+<image class="zi12" bindtap="ontapfabuyuxi" src="../../images/zi12.png"></image>
+<image class="zi13" bindtap="ontapshitiliulan" src="../../images/zi13.png"></image>
+<image class="zi14" bindtap="ontapfabutongzhi" src="../../images/zi14.png"></image>
+<text class="te11" bindtap="ontapfabuqiandao">发布签到</text>
+<text class="te12" bindtap="ontapfabuyuxi">发布预习</text>
+<text class="te13" bindtap="ontapshitiliulan">发布测试</text>
+<text class="te14" bindtap="ontapfabutongzhi">发布通知</text>
+<text class="neirongliulan">内容浏览</text>
+<image class="zi21" bindtap="ontapqiandaoliulan" src="../../images/zi21.png"></image>
+<image class="zi22" bindtap="ontapyuxiliulan" src="../../images/zi22.png"></image>
+<image class="zi23" bindtap="ontapceyanliulan" src="../../images/zi23.png"></image>
+<text class="te21" bindtap="ontapqiandaoliulan" >签到浏览</text>
+<text class="te22" bindtap="ontapyuxiliulan" >预习浏览</text>
+<text class="te23" bindtap="ontapceyanliulan">测试浏览</text>
+<text class="ziyuanshangchuan">资源上传</text>
+<image class="zi31" bindtap="ontapshangchuanyingxiang"  src="../../images/zi31.png"></image>
+<image class="zi32" bindtap="ontapshangchuanbingli" src="../../images/zi32.png"></image>
+<image class="zi33" bindtap="ontapshangchuanshiti" src="../../images/zi33.png"></image>
+<text class="te31" bindtap="ontapshangchuanyingxiang">影像资料</text>
+<text class="te32" bindtap="ontapshangchuanbingli">病例资料</text>
+<text class="te33" bindtap="ontapshangchuanshiti">习题资源</text>
+<text class="jiaoxuefankui">教学反馈</text>
+<image class="zi41" bindtap="ontapjiaoxuehudong" src="../../images/zi41.png"></image>
+<text class="te41" bindtap="ontapjiaoxuehudong">教学反馈</text>
+<text>\n</text><text>\n</text><text>\n</text>
+
+ 
+ <view>
+<modal id="modal" hidden="{{ishidden}}" title="选择通知项目"  cancel-text="取消" confirm-text="提交" bindconfirm="confirm"         bindcancel="cancel" > 
+<button data-key='zhujiemiantongzhi1' bindtap="tongzhiconfirm">\n主界面通知1\n</button>   
+<button data-key='zhujiemiantongzhi2' bindtap="tongzhiconfirm">\n主界面通知2\n</button>   
+<button data-key='zhujiemiantongzhi3' bindtap="tongzhiconfirm">\n主界面通知3\n</button>   
+<button data-key='zijiemiantongzhi1' bindtap="tongzhiconfirm">\n子界面通知1\n</button>   
+<button data-key='zijiemiantongzhi2' bindtap="tongzhiconfirm">\n子界面通知2\n</button>   
+<button data-key='zijiemiantongzhi3' bindtap="tongzhiconfirm">\n子界面通知3\n</button>   
+ </modal>
+
+<view class="modal-container">
+<modal id="modal" hidden="{{jianjiehidden}}" title="" confirm-text="确认" cancel-text="取消"         bindcancel="jianjiecancel" bindconfirm="jianjieconfirm">
+  <button bindtap="diyizhou" >第一周</button>
+  <button bindtap="dierzhou" >第二周</button>
+  <button bindtap="disanzhou" >第三周</button>
+  <button bindtap="disizhou" >第四周</button>
+   </modal>
+</view>
+</view>
+
+</view>

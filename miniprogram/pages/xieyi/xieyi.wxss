@@ -1,0 +1,10 @@
+.xieyi{
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+page{
+  width: 90%
+}
+.buju{
+     margin-left: 40rpx;
+}

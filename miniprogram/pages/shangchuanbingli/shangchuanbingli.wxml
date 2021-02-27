@@ -1,0 +1,44 @@
+
+    <view class="text-content">
+      <view class='text-area'>
+
+
+
+ <input  class='inputbox' type='text' placeholder="输入主诉" bindinput='zhusuinput' focus="{{isfocus[0]}}"/>
+  <input  class='inputbox' type='text' placeholder="输入现病史" bindinput='xianbingshiinput' focus="{{isfocus[1]}}"/>
+   <input  class='inputbox' type='text' placeholder="输入既往史" bindinput='jiwangshiinput' focus="{{isfocus[2]}}"/>
+    <input  class='inputbox' type='text' placeholder="输入临床检查" bindinput='linchuangjianchainput' focus="{{isfocus[3]}}"/>
+     <input  class='inputbox' type='text' placeholder="输入影像检查" bindinput='yingxiangjianchainput' focus="{{isfocus[4]}}"/>
+      <input  class='inputbox' type='text' placeholder="输入正确诊断" bindinput='zhenduaninput' focus="{{isfocus[5]}}"/>
+         <input  class='inputbox' type='text' placeholder="输入诊断选项1" bindinput='jianbiezhenduan1input' focus="{{isfocus[6]}}"/>
+            <input  class='inputbox' type='text' placeholder="输入诊断选项2" bindinput='jianbiezhenduan2input' focus="{{isfocus[7]}}"/>
+               <input  class='inputbox' type='text' placeholder="输入诊断选项3" bindinput='jianbiezhenduan3input' focus="{{isfocus[8]}}"/>
+                  <input  class='inputbox' type='text' placeholder="输入诊断选项4" bindinput='jianbiezhenduan4input' focus="{{isfocus[9]}}"/>
+
+
+
+
+      </view>
+
+    </view>
+
+
+
+
+
+
+
+
+<block wx:for='{{fileList}}' wx:for-index='idx'>
+      <view>
+        <image src='{{fileList[idx]}}' mode='widthFix' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+</block>
+<text>\n</text>
+<text>\n</text>
+<button class="btn-img" bindtap='chooseImage'>选择图片</button>
+<button class="btn" bindtap='submit'>发布</button>
+ <view >
+ <canvas  class='canvas' style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;top:{{canvasHeight*2}}px;" canvas-id="firstCanvas"></canvas>
+ </view>

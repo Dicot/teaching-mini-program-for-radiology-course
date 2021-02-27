@@ -1,0 +1,69 @@
+
+
+<!--index.wxml-->
+<view class="container">
+
+ <!--index.wxml-->
+<view class="container">
+
+  <!--页面根标签-->
+  <view class="content">
+   <image class="background" src="../../images/back.png" style="opacity:{{0.6}}" mode='widthFix'></image>
+    <text class="slogan">影像,即导航\n\n</text>
+  </view>
+
+  <!--注册登录-->
+  <view class="zhucedenglu">
+  <button class="btn" bindtap="modalinput" hover-class='btn_hover'>激 活</button>
+  <button class="btn" bindtap="denglumodal" hover-class='btn_hover'>登 录</button>
+<button 
+	wx:if="{{canIUse}}" 
+	open-type="getUserInfo" 
+  hover-class='btn_hover'
+  class="btn"
+	bindgetuserinfo="bindGetUserInfo"
+>微 信 登 录</button>
+<view wx:else>请升级微信版本</view>
+
+   <modal id="modal" hidden="{{hiddenmodalput}}" title="账户激活" confirm-text="提交" cancel-text="取消"         bindcancel="cancel" bindconfirm="confirm">     
+   <input type='text' placeholder="请输入姓名" maxlength="10" bindinput='usernameinput' auto-focus/>
+   <text>\n</text>
+   <input type='number' placeholder="请输入学号或工号" maxlength="13" bindinput='usernumberinput'  auto-focus/>
+   <text>\n</text>
+   <input type='txt' placeholder="请输入身份：学生/教师" maxlength="2" bindinput='usershenfeninput' auto-focus/>
+   <text>\n</text>
+   <input type='number' placeholder="请输入邀请码" maxlength="6" bindinput='userzhucemainput'  auto-focus/>
+     <text>\n</text>
+  <text decode="{{true}}" space="{{true}}" bindtap="ontaptongyixieyi"  class="tongyixieyi">注册激活即代表您已详细阅读并知情同意 </text>
+  <text>\n</text>
+   <text decode="{{true}}" space="{{true}}" bindtap="ontapxieyi" class="xieyi">本程序使用协议</text>
+     <text>\n</text>
+   </modal>
+
+    <modal id="denglumodal" hidden="{{hiddendenglu}}" title="登录信息" confirm-text="提交" cancel-text="取消"         bindcancel="denglucancel" bindconfirm="dengluconfirm">     
+   <input type='text' placeholder="请输入姓名" maxlength="10" bindinput='dengluusernameinput' auto-focus/>
+   <text>\n</text>
+   <input type='number' placeholder="请输入学号或工号" maxlength="13" bindinput='dengluusernumberinput'  auto-focus/>
+   </modal>
+
+
+
+
+  </view>
+
+
+
+  <text>\n</text>
+  <text>\n</text>
+  <!--copyright-->
+  <view>
+  <text class="Copyright">\nCopyright@四川大学华西口腔医院影像科</text>
+  </view>
+
+
+</view>
+
+
+
+
+</view>

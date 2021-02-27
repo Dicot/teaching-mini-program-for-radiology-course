@@ -1,0 +1,39 @@
+<import src='../../modules/tabbar.wxml'/>
+ <template is="tabBar" data="{{tabBar}}"/>
+ <image class="vipcard" src="../../images/vipcard.png" mode='scaleToFill'></image>
+ <view class="viptext">
+ 
+ <text class="vipshenfen">{{usershenfen}}</text>
+ <text class="vipname">{{username}}</text>
+<text class="vipfenge">一一一一一一</text>
+ <text class="vipnumber">NO.{{usernumber}}</text>
+
+
+ </view>
+
+ <view wx:if="{{usershenfen=='学生'}}">
+ <navigator open-type="navigate" url='../../pages/wodeyemian/wodeyemian?keyword=qiandao' class='icontext1'>我的签到</navigator>
+<navigator open-type="navigate" url='../../pages/wodeyemian/wodeyemian?keyword=ceyan' class='icontext2'>我的预习</navigator>
+<navigator open-type="navigate" url='../../pages/wodeyemian/wodeyemian?keyword=hudong' class='icontext3'>我的反馈</navigator>
+<view wx:if="{{weiduxiaoxi}}">
+<image src="../../images/weiduxiaoxi.png" class="weiduxiaoxi"></image>
+</view>
+<navigator open-type="navigate" url='../../pages/wodeyemian/wodeyemian?keyword=suitangceyan' class='icontext4'>我的测验</navigator>
+<text class="icontext5" bindtap="copyText">申请入群</text>
+<text class="icontext6" bindtap="tuichudenglu">退出登录</text>
+<image class="iconimage3" src="../../images/hudong.png"></image>
+<image class="iconimage2" src="../../images/ceyan.png"></image>
+<image class="iconimage1" src="../../images/ceyan.png"></image>
+<image class="iconimage4" src="../../images/ceyan.png"></image>
+<image class="iconimage5" src="../../images/ceyan.png"></image>
+<image class="iconimage6" src="../../images/ceyan.png"></image>
+ </view>
+
+  <view wx:if="{{usershenfen=='教师'}}">
+<navigator open-type="navigate" url='../../pages/wodeyemian/wodeyemian?keyword=hudong' class='icontext1'>我的反馈</navigator>
+<text class="icontext2" bindtap="copyText">申请入群</text>
+<text class="icontext3" bindtap="tuichudenglu">退出登录</text>
+<image class="iconimage1" src="../../images/hudong.png"></image>
+<image class="iconimage2" src="../../images/ceyan.png"></image>
+<image class="iconimage3" src="../../images/ceyan.png"></image>
+  </view>

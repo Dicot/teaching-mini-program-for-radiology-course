@@ -1,0 +1,10 @@
+<view class="page">
+<!--分类 -->
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shangchuanshitipublish/shangchuanshitipublish?jihe=shitiku_diyici">一、第一次上课</navigator>
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shangchuanshitipublish/shangchuanshitipublish?jihe=shitiku_dierci">二、第二次上课</navigator> 
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shangchuanshitipublish/shangchuanshitipublish?jihe=shitiku_disanci">三、第三次上课</navigator> 
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shangchuanshitipublish/shangchuanshitipublish??jihe=shitiku_disici">四、第四次上课</navigator>  
+
+
+
+  </view>

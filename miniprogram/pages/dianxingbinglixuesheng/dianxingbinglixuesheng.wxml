@@ -1,0 +1,51 @@
+
+ <view class="buju" >
+<view wx:for="{{dianxingbingli}}" wx:for-item="item" wx:for-index="index">
+<block wx:if="{{!item.binglihidden}}">
+  <button class="li" bindtap="changebingliflag" data-index="{{index}}">病例 {{currentPage}}-{{index+1}} </button>
+  <view  hidden="{{!bingliflag[index]}}">
+  <block wx:if="{{shanchuflag}}"><text class="hudongshanchu" bindtap='binglishanchu' data-index="{{index}}"  data-id="{{item._id}}">删除</text></block>
+    <block wx:if="{{shanchuflag}}"><text class="bingliyincang" bindtap='bingliyincang' data-binglihidden="{{item.binglihidden}}"  data-id="{{item._id}}">当前状态：{{item.binglihidden?'隐藏':'展示'}}</text></block>
+  <text class="zhusuneirong"></text>
+
+  <text class="zhusu">\n\n主诉</text>：{{item.zhusu}}
+
+   <text class="zhusu">\n\n现病史</text>：{{item.xianbingshi}}
+
+   <text class="zhusu">\n\n既往史</text>：{{item.jiwangshi}}
+
+   <text class="zhusu">\n\n临床检查</text>：{{item.linchuangjiancha}}
+
+   <text class="zhusu">\n\n影像检查</text>：{{item.yingxiangjiancha}}
+
+<block  wx:if="{{item.jianbiezhenduan1}}">
+<text class="zhusu" bindtap="zhenduanqueren1" data-index="{{index}}" data-zhenduan="{{item.jianbiezhenduan1}}" style="color: {{colora[index]}};">\n\n可能的诊断1：{{item.jianbiezhenduan1}}\n</text></block>
+<block  wx:if="{{item.jianbiezhenduan2}}">
+<text class="zhusu" bindtap="zhenduanqueren2" data-index="{{index}}" data-zhenduan="{{item.jianbiezhenduan2}}" style="color: {{colorb[index]}};">\n可能的诊断2：{{item.jianbiezhenduan2}}\n</text></block>
+<block wx:if="{{item.jianbiezhenduan3}}">
+<text class="zhusu" bindtap="zhenduanqueren3" data-index="{{index}}" data-zhenduan="{{item.jianbiezhenduan3}}" style="color: {{colorc[index]}};">\n可能的诊断3：{{item.jianbiezhenduan3}}\n</text></block>
+<block  wx:if="{{item.jianbiezhenduan4}}">
+<text class="zhusu" bindtap="zhenduanqueren4" data-index="{{index}}" data-zhenduan="{{item.jianbiezhenduan4}}" style="color: {{colord[index]}};">\n可能的诊断4：{{item.jianbiezhenduan4}}\n</text></block>
+    <text>\n</text>
+   <text class="zhusu">印象诊断</text>：<block wx:if="{{!zhenduanhidden[index]}}"><text class="zhenduanqueren" data-index="{{index}}" data-jihe="{{item.jianbiezhenduanjihe}}" bindtap='zhenduanqueren' decode="{{true}}" space="{{true}}">未来的医生们，请对病人负责地选择
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可能的诊断后点我查看</text></block><block wx:if="{{zhenduanhidden[index]}}">{{item.zhenduan}}</block>
+
+  <text>\n</text>
+  <view class="conts {{bingliflag[index]?'show':'hide'}}">
+<view wx:for="{{item.photopath}}" wx:for-item="photoitem" wx:for-index="photoindex" >
+  <image  bindtap="previewimg" mode="widthFix" src='{{photoitem}}' data-url='{{photoitem}}'></image>
+  <text>\n</text>
+</view>
+</view>
+
+</view>
+  <text>\n</text>
+</block>
+</view>
+<modal id="modal" hidden="{{shanchuhidden}}" title="删除确认" confirm-text="确认" cancel-text="取消"         bindcancel="shanchuquxiao" bindconfirm="shanchuqueren"></modal>
+
+<button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>
+</view>

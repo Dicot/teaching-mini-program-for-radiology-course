@@ -1,0 +1,17 @@
+<view wx:if='{{isceyan}}'>
+<view wx:for="{{question}}" wx:for-item="item" wx:for-index="index">
+<text>第{{index+1}}题\n</text>
+<text class="timu">{{item.tigan}}</text>
+<block wx:if="{{item.photopath.length>0}}">
+<image src="{{item.photopath}}" mode='widthFix'></image></block>
+<button class="optionbutton" data-index='{{index}}' bindtap="clicka" style="background-color: {{colora[index]}};">A:{{item.option.A}}\n</button>
+<button class="optionbutton" data-index='{{index}}' bindtap="clickb" style="background-color: {{colorb[index]}};">B:{{item.option.B}}\n</button>
+<button class="optionbutton" data-index='{{index}}' bindtap="clickc" style="background-color: {{colorc[index]}};">C:{{item.option.C}}\n</button>
+<button class="optionbutton" data-index='{{index}}' bindtap="clickd" style="background-color: {{colord[index]}};">D:{{item.option.D}}\n</button>
+</view>
+
+<button bindtap="tijiao">提交</button>
+</view>
+<view hidden="{{isceyan}}">
+<text>测验尚未开始或测验口令错误,请重试</text>
+</view>

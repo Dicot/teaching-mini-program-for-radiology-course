@@ -1,0 +1,60 @@
+.hudongshanchu{
+  color: gray;
+  font-size: 30rpx;
+  float: right;
+}
+/*文本描述  */
+.conts{
+  font-size: 28rpx;
+  line-height:50rpx;
+  /*关键属性（必须有的）  */
+  display: -webkit-box; 
+  /*规定子元素的排列方向 */
+  -webkit-box-orient: vertical; 
+  /*实现多余的文字隐藏并用省略号来代表被隐藏的文字  */
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+ 
+/*切换  */  
+ .state{
+  color: cyan;
+  float: right;
+  font-size: 30rpx;
+  margin: 30rpx;
+}
+.hide {
+  -webkit-line-clamp: 3;
+  /* 透明度,半透明 */
+  opacity: 0.75;
+}
+ 
+.show {
+  -webkit-line-clamp: 15;
+  opacity: 1;
+}
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.optionbutton{
+  font-size: 30rpx
+}
+.timu{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 31rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 150rpx;
+  line-height: 48rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}

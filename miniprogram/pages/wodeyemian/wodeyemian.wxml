@@ -1,0 +1,81 @@
+<view> 
+<view wx:if='{{keyword=="qiandao"}}'>
+<text>签到总天数：{{qiandaotianshu}}</text>
+<view wx:for="{{qiandaoriqi}}" wx:for-item="item" wx:for-index="index">
+<text>第{{index+1}}次：{{item}}</text>
+</view>
+</view>
+
+<view wx:if="{{keyword=='ceyan'}}">
+<view wx:for="{{myceyan}}" wx:for-item="item" wx:for-index="index" >
+<button class="li" data-index="{{index}}" bindtap="changeceyanflag">第{{index+1}}次 发布日期：{{item.datitime}}</button> 
+<view hidden="{{!ceyanflag[index]}}">
+  <text decode="{{true}}" space="{{true}}">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;预习题目:{{item.timu}}
+  </text>
+  <image  bindtap="previewimg" mode="aspectFit" src='{{item.photopath}}' data-url='{{item.photopath}}'></image>
+
+ <text decode="{{true}}" space="{{true}}">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.datiname}}</text>
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.datimiaosu}}\n&nbsp;&nbsp;</text>
+<text>\n</text>
+</view>
+<text>\n\n</text>
+</view>
+</view>
+
+
+
+<view wx:if="{{keyword=='hudong'}}">
+<view wx:for="{{myhudong}}" wx:for-item="item" wx:for-index="index" >
+<button class="li" data-index="{{index}}" bindtap="changehudongflag">第{{index+1}}次 发布日期：{{item.hudongtime}}</button> 
+<view hidden="{{!hudongflag[index]}}">
+
+  <text decode="{{true}}" space="{{true}}">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.hudongmiaosu}} 
+  </text>
+  <text class="hudongshanchu" bindtap='hudongshanchu' data-index="{{index}}">删除</text>
+  <image  bindtap="previewimg" mode="aspectFit" src='{{item.photopath}}' data-url='{{item.photopath}}'></image>
+<text>\n</text>
+<block wx:if="{{item.reply_name}}">
+<text decode="{{true}}" space="{{true}}">回复：\n</text>
+<text decode="{{true}}" space="{{true}}">
+{{item.reply_name}}  {{item.reply_time}}\n&nbsp;&nbsp;</text>
+<text>{{item.reply_miaosu}}</text>
+</block>
+</view>
+
+<text>\n\n</text>
+</view>
+</view>
+
+
+<view wx:if="{{keyword=='suitangceyan'}}">
+<view wx:for="{{mysuitangceyan}}" wx:for-item="item" wx:for-index="index" >
+<button class="li" data-index="{{index}}" bindtap="changesuitangceyanflag">第{{index+1}}次 测验日期：{{item.datitime}}</button> 
+<view hidden="{{!suitangceyanflag[index]}}">
+   <text decode="{{true}}" space="{{true}}">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的得分：{{item.datiscore}}
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的答案：{{item.datianswer}}
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;共错题：{{item.cuotitimu.length}}</text>
+  <view hidden="{{!cuotiflag[index]}}">
+   <view  wx:for="{{item.cuotitimu}}" wx:for-item="quesitem" wx:for-index="quesindex" >
+   <text class="timu" decode="{{true}}" space="{{true}}">
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;错题{{quesindex+1}}  {{quesitem.tigan}}
+ </text> 
+<image src="{{quesitem.photopath}}" mode='widthFix'></image>
+<button class="optionbutton" data-index='{{index}}'>A:{{quesitem.option.A}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>B:{{quesitem.option.B}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>C:{{quesitem.option.C}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>D:{{quesitem.option.D}}\n</button>
+</view>
+</view>
+
+<text>\n</text>
+</view>
+<text>\n\n</text>
+</view>
+</view>
+
+
+</view>

@@ -1,0 +1,6 @@
+ <view>
+<text class="riqi">上课日期：{{time}}</text>
+<input type='number' placeholder="这里输入签到码" maxlength="8" bindinput='qiandaomainput' auto-focus/>
+<text>\n</text>
+<button bindtap="ontapqiandao" disabled="{{qiandaodisabled}}">签到</button>
+</view>

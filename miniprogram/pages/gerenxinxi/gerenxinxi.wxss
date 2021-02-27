@@ -1,0 +1,145 @@
+page{
+  background-color: rgb(226, 236, 236) ;
+}
+
+.vipcard{
+  position: fixed;
+  width: 100%;
+  height:350rpx;
+  z-index: 1;
+  opacity: 0.9
+}
+.vipshenfen{
+ z-index: 3;
+ position: absolute;
+ top:20rpx;
+ left:20rpx;
+ font-size: 60rpx;
+ font-weight: 600;
+ color:#FFFACD;
+}
+.vipname{
+ z-index: 3;
+ position: absolute;
+ top:140rpx;
+ left:290rpx;
+ font-size: 60rpx;
+ font-weight: 600;
+ color:#FFFACD;
+}
+.vipnumber{
+ z-index: 3;
+ position: absolute;
+ top:300rpx;
+ left:20rpx;
+ font-size: 40rpx;
+ font-weight: 600;
+ color:#FFFACD;
+}
+.vipfenge{
+ z-index: 5;
+ position: absolute;
+ top:280rpx;
+ left:20rpx;
+ font-size: 30rpx;
+ font-weight: 600;
+ color:#FFFACD;
+}
+
+.iconimage1{ 
+  position: fixed;
+  top:400rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+  .iconimage2{ 
+  position: fixed;
+  top:465rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+  .iconimage3{ 
+  position: fixed;
+  top:530rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+    .iconimage4{ 
+  position: fixed;
+  top:595rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+      .iconimage5{ 
+  position: fixed;
+  top:660rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+        .iconimage6{ 
+  position: fixed;
+  top:725rpx;
+  left:20rpx;
+  width: 20px;  
+  height: 20px;  
+  display: block;  
+  margin:auto;
+  } 
+  .icontext1{
+  position: fixed;
+  top:400rpx;
+  left:70rpx;
+  font-weight: 700;
+  }
+  .icontext2{
+  position: fixed;
+  top:465rpx;
+  left:70rpx;
+  font-weight: 700;
+  }
+  .icontext3{
+  position: fixed;
+  top:530rpx;
+  left:70rpx;
+  font-weight: 700;
+  }
+  .weiduxiaoxi{
+  position: fixed;
+  top:535rpx;
+  left:220rpx;
+  width: 15px;  
+  height: 15px;  
+  }
+  .icontext4{
+  position: fixed;
+  top:595rpx;
+  left:70rpx;
+  font-weight: 700;
+  }
+    .icontext5{
+  position: fixed;
+  top:660rpx;
+  left:70rpx;
+  font-weight: 700;
+  }
+      .icontext6{
+  position: fixed;
+  top:725rpx;
+  left:70rpx;
+  font-weight: 700;
+  }

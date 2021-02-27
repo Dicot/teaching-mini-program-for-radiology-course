@@ -1,0 +1,8 @@
+.riqi{
+  background-color:rgb(120, 235, 250);
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

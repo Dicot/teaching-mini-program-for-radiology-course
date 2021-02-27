@@ -1,0 +1,17 @@
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.pageinput{
+  width: 400rpx;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+}

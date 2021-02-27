@@ -1,0 +1,397 @@
+page{
+ background-color:rgb(226, 236, 236) ;
+  height:100%;
+}
+.swiperdot{
+  width: 100%;
+  height:400rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: rgb(226, 236, 236);
+}
+swiper image{
+  width: 100%;
+  height: 85%;
+}
+swiper text{
+  width:100%;
+   height:15%;
+   font-size: 28rpx;
+   font-weight: 600;
+   text-align:center;
+   align-items:center;
+   justify-content: center;
+   margin: auto;
+}
+.btn1{
+  position: absolute;
+  top:500rpx;
+  left:110rpx;
+  width:200rpx;
+  height:200rpx;
+  border: 2rpx black solid;
+  background-color:#F1FAFA;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  font-weight:550;
+}
+.btn2{
+  position: absolute;
+  top:500rpx;
+    right: 110rpx;
+  width:200rpx;
+  height:200rpx;
+  border: 2rpx black solid;
+  background-color:#F1FAFA;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  font-weight:550;
+}
+.btn3{
+  position: absolute;
+  top:750rpx;
+  left:110rpx;
+  width:200rpx;
+  height:200rpx;
+  border: 2rpx black solid;
+  background-color:#F1FAFA;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  font-weight:550;
+}
+.btn4{
+  position: absolute;
+  top:750rpx;
+    right: 110rpx;
+  width:200rpx;
+  height:200rpx;
+  border: 2rpx black solid;
+  background-color:#F1FAFA;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  font-weight:550;
+}
+
+.btn::after{
+  border:0;
+}
+.btn_hover{
+  background-color: pink;
+}
+.Copyright{
+ color:white;
+ font-size: 20rpx;
+ font-style: italic;
+ position: absolute;
+  top: 1300rpx;
+  left:190rpx;
+ 
+}
+
+
+.img1{
+position: absolute;
+top:410rpx;
+left: 0;
+height:300rpx;
+width:50%;
+}
+.text1{
+  position: absolute;
+  top:580rpx;
+  left:92rpx;
+  width:200rpx;
+  height:200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  font-weight:700;
+}
+.img2{
+  position: absolute;
+top:410rpx;
+right:0;
+height:300rpx;
+width:50%;
+}
+.text2{
+  position: absolute;
+  top:580rpx;
+  left:470rpx;
+  width:200rpx;
+  height:200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  font-weight:700;
+}
+.img3{
+    position: absolute;
+top:710rpx;
+left: 0;
+height:300rpx;
+width:50%;
+}
+.text3{
+  position: absolute;
+  top:850rpx;
+  left:92rpx;
+  width:200rpx;
+  height:200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  font-weight:700;
+}
+.img4{
+    position: absolute;
+    right:0;
+top:710rpx;
+height:300rpx;
+width:50%;
+}
+.text4{
+  position: absolute;
+  top:850rpx;
+  left:470rpx;
+  width:200rpx;
+  height:200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  font-weight:700;
+}
+
+.xinxifabu{
+  background: -webkit-linear-gradient(left,rgb(226, 236, 236),white);
+  position: absolute;
+  top: 420rpx;
+    left:10rpx;
+  height: 60rpx;
+  width: 100%;
+  float:left;
+  padding-top:15rpx;
+  padding-left:30rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.zi11{
+   position: absolute;
+  top:500rpx;
+  left:370rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi12{
+   position: absolute;
+  top:500rpx;
+  left:280rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi13{
+   position: absolute;
+  top:500rpx;
+  left:410rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi14{
+   position: absolute;
+  top:500rpx;
+  left:540rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.te11{
+   position: absolute;
+  top:590rpx;
+  left:365rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te12{
+   position: absolute;
+  top:590rpx;
+  left:275rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te13{
+   position: absolute;
+  top:594rpx;
+  left:405rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te14{
+   position: absolute;
+  top:590rpx;
+  left:535rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.neirongliulan{
+   background: -webkit-linear-gradient(left,rgb(226, 236, 236),white);
+  position: absolute;
+  top: 640rpx;
+  left:10rpx;
+  height: 60rpx;
+  width: 100%;
+  float:left;
+  padding-top:15rpx;
+  padding-left:30rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.zi21{
+   position: absolute;
+  top:720rpx;
+  left:370rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi22{
+   position: absolute;
+  top:720rpx;
+  left:280rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi23{
+   position: absolute;
+  top:720rpx;
+  left:410rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.te21{
+   position: absolute;
+  top:810rpx;
+  left:365rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te22{
+   position: absolute;
+  top:810rpx;
+  left:275rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te23{
+   position: absolute;
+  top:810rpx;
+  left:405rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.ziyuanshangchuan{
+   background: -webkit-linear-gradient(left,rgb(226, 236, 236),white);
+  position: absolute;
+  top: 860rpx;
+    left:10rpx;
+  height: 60rpx;
+  width: 100%;
+  float:left;
+  padding-top:15rpx;
+  padding-left:30rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.zi31{
+   position: absolute;
+  top:940rpx;
+  left:370rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi32{
+   position: absolute;
+  top:940rpx;
+  left:280rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.zi33{
+   position: absolute;
+  top:940rpx;
+  left:410rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.te31{
+   position: absolute;
+  top:1030rpx;
+  left:365rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te32{
+   position: absolute;
+  top:1030rpx;
+  left:275rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.te33{
+   position: absolute;
+  top:1030rpx;
+  left:405rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}
+.jiaoxuefankui{
+   background: -webkit-linear-gradient(left,rgb(226, 236, 236),white);
+  position: absolute;
+  top: 1080rpx;
+  height: 60rpx;
+    left:10rpx;
+  width: 100%;
+  float:left;
+  padding-top:15rpx;
+  padding-left:30rpx;
+  font-weight: 700;
+  font-size: 30rpx;
+}
+.zi41{
+   position: absolute;
+  top:1160rpx;
+  left:370rpx;
+  width:85rpx;
+  height:85rpx;
+}
+.te41{
+   position: absolute;
+  top:1250rpx;
+  left:365rpx;
+  width:100rpx;
+  height:15rpx;
+  font-size: 25rpx;
+  font-weight: 700;
+}

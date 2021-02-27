@@ -1,0 +1,37 @@
+<view> 
+<text>{{mingcheng}}\n</text>
+<view wx:for="{{shitiku}}" wx:for-item="item" wx:for-index="index">
+<button class="li" data-index="{{index}}" bindtap="changeshitiflag">{{currentPage}}-{{index+1}} {{item.fabutime}} {{item.fabuname}}</button> 
+<button class="timu" bindtap='ontapshitixuanze' data-index="{{index}}">题目：{{item.tigan}}</button>
+ <text wx:if="{{xuanzeflag[index]}}" class="shitixuanze" >已选择</text>
+<view hidden="{{!shitiflag[index]}}">
+
+<image src="{{item.photopath}}" mode='widthFix'></image>
+<button class="optionbutton" data-index='{{index}}'>A:{{item.option.A}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>B:{{item.option.B}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>C:{{item.option.C}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>D:{{item.option.D}}\n</button>
+<text>正确答案：{{item.trueanswer}}</text>
+  <block wx:if="{{shanchuflag}}"><text class="hudongshanchu" bindtap='shitishanchu'  data-id="{{item._id}}">删除</text></block>
+
+
+
+
+
+
+
+
+
+</view>
+</view>
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+<text>\n</text>
+<button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>
+<input class="pageinput" type='number' placeholder="请输入测验密钥" maxlength="8" bindinput='ceyankeyinput'  focus="{{ceyaninputhidden}}"/>
+<button bindtap="shengchengceyan">生成测验</button>
+</view>

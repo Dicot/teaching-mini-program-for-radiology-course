@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/loginsuccess/loginsuccess",
+    "pages/gerenxinxi/gerenxinxi",
+    "pages/fabuceyan/fabuceyan",
+    "pages/tongzhi/tongzhi",
+    "pages/jiaoshijiaoxuejiemian/jiaoshijiaoxuejiemian",
+    "pages/yingxiangziliao/yingxiangziliao",
+    "pages/yingxiangziliao1/yingxiangziliao1",
+    "pages/dianxingbingli/dianxingbingli",
+    "pages/xueshengjiaoxuejiemian/xueshengjiaoxuejiemian",   
+    "pages/fabuqiandao/fabuqiandao",
+    "pages/xueshengqiandao/xueshengqiandao",
+    "pages/jiaoxuehudong/jiaoxuehudong",
+    "pages/publish/publish",
+    "pages/ketangceyan/ketangceyan",
+    "pages/ceyanliulan/ceyanliulan",
+    "pages/wodeyemian/wodeyemian",
+    "pages/suitangceyan/suitangceyan",
+    "pages/fabutongzhi/fabutongzhi",
+    "pages/shangchuanshiti/shangchuanshiti",
+    "pages/shangchuanshitipublish/shangchuanshitipublish",
+    "pages/shitiliulan/shitiliulan",
+    "pages/shitiliulan1/shitiliulan1",
+    "pages/qiandaoliulan/qiandaoliulan",
+    "pages/shangchuanyingxiang/shangchuanyingxiang",
+    "pages/shangchuanyingxiang1/shangchuanyingxiang1",
+    "pages/shangchuanbingli/shangchuanbingli",
+    "pages/xieyi/xieyi",
+    "pages/keshijieshao/keshijieshao",
+    "pages/dianxingbinglixuesheng/dianxingbinglixuesheng"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "颌面影像诊断",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+  
+
+
+
+}

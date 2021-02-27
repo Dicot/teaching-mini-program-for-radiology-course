@@ -1,0 +1,7 @@
+<view class="page">
+<!--分类 -->
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shitiliulan1/shitiliulan1?jihe=shitiku_diyici&zhou=diyizhou">一、第一次上课</navigator>
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shitiliulan1/shitiliulan1?jihe=shitiku_dierci&zhou=dierzhou">二、第二次上课</navigator> 
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shitiliulan1/shitiliulan1?jihe=shitiku_disanci&zhou=disanzhou">三、第三次上课</navigator> 
+<navigator open-type="redirect" class="li bg-gray" url="../../pages/shitiliulan1/shitiliulan1?jihe=shitiku_disici&zhou=disizhou">四、第四次上课</navigator>  
+</view>

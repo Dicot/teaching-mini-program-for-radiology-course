@@ -1,0 +1,70 @@
+
+<!--index.wxml-->
+<view class="container">
+
+ <view>
+
+<view class="swiper-container">
+ <swiper class="swiperdot" 
+  autoplay='true' interval='5000' duration='1000'>
+
+    <swiper-item>
+  <image src="{{tongzhi0.photopath}}"  data-index="0"   ></image>
+  <view wx:if="{{tongzhi0.neirong}}"><text>【通知】{{tongzhi0.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi1.photopath}}"  data-index="1" ></image>
+  <view wx:if="{{tongzhi1.neirong}}"><text>【通知】{{tongzhi1.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi2.photopath}}"  data-index="2" ></image>
+  <view wx:if="{{tongzhi2.neirong}}"><text>【通知】{{tongzhi2.neirong}}</text></view>
+    </swiper-item>
+
+</swiper>
+</view>
+<modal id="modal" hidden="{{tongzhihidden}}" title="通知" confirm-text="确认" cancel-text="取消"         bindcancel="tongzhicancel" bindconfirm="tongzhiconfirm">
+  <text>{{title}}\n</text>     
+  
+   <text>{{neirong}}</text>
+   </modal>
+
+
+<view class="button-container">
+
+<text class='xinxifabu'>上课签到</text>
+<image class="zi11" bindtap="ontapshangkeqiandao" src="../../images/zi11.png"></image>
+<text class="te11" bindtap="ontapshangkeqiandao">上课签到</text>
+<text class="neirongliulan">课前预习</text>
+<image class="zi21" bindtap="ontapkeqianyuxi" src="../../images/zi21.png"></image>
+<text class="te21" bindtap="ontapkeqianyuxi" >课前预习</text>
+<text class="ziyuanshangchuan">随堂测验</text>
+<image class="zi31" bindtap="ontapsuitangceyan"  src="../../images/zi31.png"></image>
+<text class="te31" bindtap="ontapsuitangceyan">随堂测验</text>
+<text class="jiaoxuefankui">教学反馈</text>
+<image class="zi41" bindtap="ontapjiaoxuehudong" src="../../images/zi41.png"></image>
+<text class="te41" bindtap="ontapjiaoxuehudong">教学反馈</text>
+<text>\n</text><text>\n</text><text>\n</text>
+</view>
+
+
+
+
+
+
+<modal id="modal" hidden="{{ishidden}}" title="请输入测验密钥" confirm-text="提交" cancel-text="取消"         bindcancel="cancel" bindconfirm="confirm">
+  <text>\n</text>     
+   <input type='number' placeholder="8位测验密钥" maxlength="8" bindinput='ceyankey' auto-focus/>
+   <text>\n</text>
+   </modal>
+<modal id="modal" hidden="{{isyuxihidden}}" title="请输入预习口令" confirm-text="提交" cancel-text="取消"         bindcancel="yuxicancel" bindconfirm="yuxiconfirm">
+  <text>\n</text>     
+   <input type='number' placeholder="8位预习口令" maxlength="8" bindinput='yuxikey' auto-focus/>
+   <text>\n</text>
+   </modal>
+ </view>
+
+</view>
+

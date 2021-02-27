@@ -1,0 +1,17 @@
+ <view>
+<text class="riqi">\n当前签到码：{{time}}\n</text>
+<text>\n</text>
+<button bindtap="ontapfabuqiandao">发布签到码</button>
+<text>当前签到状态：{{isqiandao}}</text>
+<button bindtap='ontapkaishiqiandao'>开始签到</button>
+<button bindtap='ontaptingzhiqiandao'>终止签到</button>
+</view>
+
+<view class="modal-container">
+<modal id="modal" hidden="{{jianjiehidden}}" title="" confirm-text="确认" cancel-text="取消"         bindcancel="jianjiecancel" bindconfirm="jianjieconfirm">
+  <button bindtap="diyizhou" >第一周</button>
+  <button bindtap="dierzhou" >第二周</button>
+  <button bindtap="disanzhou" >第三周</button>
+  <button bindtap="disizhou" >第四周</button>
+   </modal>
+</view>

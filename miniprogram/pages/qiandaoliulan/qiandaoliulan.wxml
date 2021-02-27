@@ -1,0 +1,21 @@
+<text class="li">已签到人数：{{total}}</text>
+<view wx:for="{{qiandaoinfo}}" wx:for-item="item" wx:for-index="index" >
+
+<button class="li" data-index="{{index}}" bindtap="changeceyanflag">{{currentPage}}-{{index+1}} {{item.usernumber}}</button> 
+<view hidden="{{!ceyanflag[index]}}">
+
+  <text>
+   姓名：{{item.username}}
+   签到码：{{item.qiandaoma}}
+  </text>
+
+
+</view>
+<text>\n\n</text>
+</view>
+
+
+<button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>

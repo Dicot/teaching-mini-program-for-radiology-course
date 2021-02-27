@@ -1,0 +1,88 @@
+page{
+   background-color:#F1FAFA;
+  width: 90%;
+  margin:0;
+  padding:0;
+}
+.buju{
+    margin-left: 40rpx;
+}
+.zhenduanqueren{
+  color: gray;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.hudongshanchu{
+  color: gray;
+  font-size: 30rpx;
+  float: right;
+}
+.bingliyincang{
+    color: gray;
+  font-size: 30rpx;
+  float: left;
+}
+.pageinput{
+  z-index:1002;
+  width: 400rpx;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+}
+.li {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.bg-gray{
+    background-color: #ccc!important;
+    border-bottom: 1rpx solid  #fff!important;
+}
+
+.li .icon-xiala ,.icon-shangjiantou {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.gray {
+  color: #8e8e8e;
+}
+
+.red {
+  color: #fe2e2e;
+}
+.btn::after{
+  border:0;
+}
+.btn_hover{
+  background-color: pink;
+}
+.zhusu{
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgb(85, 93, 99)
+}
+.zhusuneirong{
+display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  line-height: 40rpx;
+}
+.zhenduanbutton{
+    justify-content: space-between;
+  font-size: 34rpx;
+  width: 92%;
+  padding: 0 4%;
+  line-height: 40rpx;
+}
+.jianbie{
+  z-index: 1002
+}

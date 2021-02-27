@@ -1,0 +1,31 @@
+    <!--miniprogram/pages/marry/marry.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <view class="text-content">
+      <view class='text-area'>
+
+
+           <input  class='inputbox' type='text' placeholder="说点什么吧" value="{{textContent}}" bindinput='getTextAreaContent' auto-focus/>
+      </view>
+
+    </view>
+    <scroll-view class="image-group" scroll-x="true">
+      <block wx:for='{{fileList}}' wx:for-index='idx'>
+      <view>
+        <image src='{{fileList[idx]}}' mode='aspectFill' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+      </block>
+      
+    </scroll-view>
+    <view class='btn-func'>
+      <button class="btn-img" bindtap='chooseImage'>选择图片</button>
+      <button class="btn" formType='submit'  open-type="getUserInfo">发布</button>
+      <!-- <image hidden=''></image> -->
+    </view>
+  </form>
+
+</view>
+ <view >
+ <canvas  class='canvas' style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;top:{{canvasHeight*2}}px;" canvas-id="firstCanvas"></canvas>
+ </view>

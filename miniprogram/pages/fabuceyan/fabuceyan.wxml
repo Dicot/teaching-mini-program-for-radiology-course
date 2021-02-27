@@ -1,0 +1,39 @@
+<!--miniprogram/pages/marry/marry.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <view class="text-content">
+      <view class='text-area'>
+           <input  class='inputbox' type='text' placeholder="预习题目" value="{{textContent}}" bindinput='getTextAreaContent' auto-focus/>
+           
+           <input  class='inputbox' type='number' maxlength='8' placeholder="8位预习口令,如{{time}}" value="{{keycontent}}" bindinput='getkeyContent' auto-focus/>
+      </view>
+
+    </view>
+    <scroll-view class="image-group" scroll-x="true">
+      <block wx:for='{{fileList}}' wx:for-index='idx'>
+      <view>
+        <image src='{{fileList[idx]}}' mode='aspectFill' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+      </block>
+      
+    </scroll-view>
+    <view class='btn-func'>
+      <button class="btn-img" bindtap='chooseImage'>选择图片</button>
+      <button class="btn" formType='submit'>发布预习</button>
+      <!-- <image hidden=''></image> -->
+    </view>
+  </form>
+
+</view>
+ <view >
+ <canvas  class='canvas' style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;top:{{canvasHeight*2}}px;" canvas-id="firstCanvas"></canvas>
+ </view>
+ <view class="modal-container">
+<modal id="modal" hidden="{{jianjiehidden}}" title="" confirm-text="确认" cancel-text="取消"         bindcancel="jianjiecancel" bindconfirm="jianjieconfirm">
+  <button bindtap="diyizhou" >第一周</button>
+  <button bindtap="dierzhou" >第二周</button>
+  <button bindtap="disanzhou" >第三周</button>
+  <button bindtap="disizhou" >第四周</button>
+   </modal>
+</view>

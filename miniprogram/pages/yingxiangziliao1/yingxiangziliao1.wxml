@@ -1,0 +1,111 @@
+<view class="page">
+<!--分类 -->
+<view class="li" data-index="0" bindtap='changeToggle'>
+<view class="left">一、颌面部正常解剖影像</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[0]}}">
+    <block wx:for="{{nzhengchang}}" wx:for-item="item" wx:for-index="index">
+    <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_zhengchang">{{item}}</navigator> 
+
+    </block>
+  </view>
+
+<view class="li" data-index="1" bindtap='changeToggle'>
+<view class="left">二、牙及牙周疾病</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[1]}}">
+    <block wx:for="{{nya}}" wx:for-item="item" wx:for-index="index">
+     <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_ya">{{item}}</navigator> 
+    </block>
+  </view>
+
+<view class="li" data-index="2" bindtap='changeToggle'>
+<view class="left">三、颌面骨炎症</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[2]}}">
+    <block wx:for="{{nyanzheng}}" wx:for-item="item" wx:for-index="index">
+      <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_yanzheng">{{item}}</navigator> 
+    </block>
+  </view>
+<view class="li" data-index="3" bindtap='changeToggle'>
+<view class="left">四、口腔颌面部囊肿</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[3]}}">
+    <block wx:for="{{nnangzhong}}" wx:for-item="item" wx:for-index="index">
+      <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_nangzhong">{{item}}</navigator> 
+    </block>
+  </view>
+<view class="li" data-index="4" bindtap='changeToggle'>
+<view class="left">五、口腔颌面部良性肿瘤和瘤样改变</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[4]}}">
+    <block wx:for="{{nliangxing}}" wx:for-item="item" wx:for-index="index">
+     <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_liangxing">{{item}}</navigator> 
+    </block>
+  </view>
+<view class="li" data-index="5" bindtap='changeToggle'>
+<view class="left">六、口腔颌面部恶性肿瘤</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[5]}}">
+    <block wx:for="{{nexing}}" wx:for-item="item" wx:for-index="index">
+      <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_exing">{{item}}</navigator>  
+    </block>
+  </view>
+<view class="li" data-index="6" bindtap='changeToggle'>
+<view class="left">七、口腔颌面部骨折</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[6]}}">
+    <block wx:for="{{nguzhe}}" wx:for-item="item" wx:for-index="index">
+      <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_guzhe">{{item}}</navigator> 
+    </block>
+  </view>
+<view class="li" data-index="7" bindtap='changeToggle'>
+<view class="left">八、系统病在口腔及颅颌面骨的表现</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[7]}}">
+    <block wx:for="{{nxitongbing}}" wx:for-item="item" wx:for-index="index">
+     <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_xitongbing">{{item}}</navigator> 
+    </block>
+  </view>
+<view class="li" data-index="8" bindtap='changeToggle'>
+<view class="left">九、唾液腺疾病</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[8]}}">
+    <block wx:for="{{ntuoyexian}}" wx:for-item="item" wx:for-index="index">
+     <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_tuoyexian">{{item}}</navigator>  
+    </block>
+  </view>
+<view class="li" data-index="9" bindtap='changeToggle'>
+<view class="left">十、颞下颌关节疾病</view>
+<view class="right"> <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[9]}}">
+    <block wx:for="{{nguanjiebing}}" wx:for-item="item" wx:for-index="index">
+    <navigator class="li bg-gray" url="../../pages/yingxiangziliao/yingxiangziliao?mingcheng={{item}}&jihe=yingxiangziliao_guanjiebing">{{item}}</navigator> 
+    </block>
+  </view>
+
+
+
+
+
+  </view>

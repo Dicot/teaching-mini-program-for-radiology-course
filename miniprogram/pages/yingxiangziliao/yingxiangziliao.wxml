@@ -1,0 +1,17 @@
+<view  class='desc'> 
+<modal id="modal" hidden="{{shanchuhidden}}" title="删除确认" confirm-text="确认" cancel-text="取消"         bindcancel="shanchuquxiao" bindconfirm="shanchuqueren"></modal>
+<view wx:for="{{imgurls}}" wx:for-item="item" wx:for-index="index" >
+<block class="xunhuan">
+<text>资料{{index+1}}</text>
+  <block wx:if="{{shanchuflag}}"><text class="hudongshanchu" bindtap='yingxiangshanchu'  data-index="{{index}}">删除</text></block>
+ <swiper class="swiperdot"  >
+    <swiper-item>
+      <image bindtap="previewimg" class="previewimg" data-url='{{item.photopath1}}' mode='aspectFit' src="{{item.photopath1}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bindtap="previewimg" class="previewimg"  data-url='{{item.photopath2}}' mode="aspectFit" src='{{item.photopath2}}'></image>
+    </swiper-item>
+</swiper>
+</block>
+</view>
+</view>

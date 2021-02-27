@@ -1,0 +1,76 @@
+<wxs module="filters" src="../../modules/filters.wxs"></wxs>
+<scroll-view  class="viewpage">
+
+<scroll-view class="yuxiceyan" wx:if='{{key=="yuxi"&&ceyancunzai}}'>
+<text class="miaosu">课前预习\n</text>
+
+<modal id="modal" hidden="{{yuximodalhidden}}" title="预习" confirm-text="开始预习" cancel-text="停止预习"         bindcancel="tingzhiyuxi" bindconfirm="kaishiyuxi">
+</modal>
+
+    <button class="li" bindtap="showyuxi">发布时间：{{yuxitimu.ceyantime}} 当前状态：{{yuxitimu.isceyan}}</button>
+    <text class="li">
+    <text>已完成人数：{{total}}</text>
+    预习口令：{{yuxitimu.ceyankey}}
+    预习题目：{{yuxitimu.ceyanmiaosu}}
+    </text>
+    <image bindtap="previewimg" mode="widthFix" src='{{yuxitimu.photopath}}' data-url='{{yuxitimu.photopath}}' ></image>
+  <view wx:for="{{yuxi}}" wx:for-item="item" wx:for-index="index">
+  <button class="li" bindtap="changeyuxiflag" data-index="{{index}}">第{{currentPage}}-{{index+1}}位 学号：{{item.datinumber}}</button>  
+  <view class="xiangqing"  hidden="{{!yuxiflag[index]}}">
+  <text>
+  姓名：{{item.datiname}}
+  描述：{{item.datimiaosu}}
+  时间：{{item.datitime}}
+  </text> 
+  </view>
+  </view>
+  <view class="buttonbox">
+  <button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>
+</view>
+</scroll-view>
+
+<scroll-view class="yuxiceyan" wx:if='{{key=="ceyan"&&ceyancunzai}}'>
+
+<text class="miaosu">随堂测验\n</text>
+<modal id="modal" hidden="{{ceyanmodalhidden}}" title="测验" confirm-text="开始测验" cancel-text="停止测验"         bindcancel="tingzhiceyan" bindconfirm="kaishiceyan">
+</modal>
+    <button class="li" bindtap="showceyan">发布时间：{{ceyantimu.time}} 当前状态：{{ceyantimu.isceyan}}</button>
+    <text class="li" bindtap="changeceyantimuflag">
+    <text>已完成人数：{{total}}</text>
+    测验口令：{{ceyantimu.ceyankey}}
+    测验题目：查看
+    </text>
+    <text>\n</text><text>\n</text><text>\n</text><text>\n</text>
+<view hidden="{{ceyantimuflag}}">
+<view wx:for="{{ceyantimu.question}}" wx:for-item="quesitem" wx:for-index="quesindex">
+ <text  class="timu">第{{quesindex+1}}题  {{quesitem.tigan}}
+ 
+ </text> 
+<view wx:if="{{quesitem.photopath.length>0}}"><image src="{{quesitem.photopath}}" mode='widthFix'></image></view>
+<button class="optionbutton" data-index='{{index}}'>A:{{quesitem.option.A}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>B:{{quesitem.option.B}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>C:{{quesitem.option.C}}\n</button>
+<button class="optionbutton" data-index='{{index}}'>D:{{quesitem.option.D}}\n</button>
+<text>正确答案：{{quesitem.trueanswer}} 
+</text>
+</view>
+</view>
+<view wx:for="{{ceyan}}" wx:for-item="stuitem" wx:for-index="stuindex" >
+<text class="border">第{{currentPage}}-{{stuindex+1}}位 答案：{{stuitem.datianswer}} 得分：{{stuitem.datiscore}}  
+姓名：{{stuitem.datiname}} 学号：{{stuitem.datinumber}} 
+</text>
+</view>
+<view class="buttonbox">
+  <button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>
+</view>
+</scroll-view>
+
+
+
+</scroll-view>

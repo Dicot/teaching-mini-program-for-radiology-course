@@ -1,0 +1,17 @@
+ .biaoti{
+  border-bottom: 1rpx solid #f1f1f1;
+  font-size: 40rpx
+}
+.buju{
+    margin-left: 40rpx;
+}
+.neirong{
+  font-size: 25rpx;
+
+
+}
+page{
+  width: 90%;
+  margin:0;
+  padding:0;
+}

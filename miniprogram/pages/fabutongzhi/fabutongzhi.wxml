@@ -1,0 +1,34 @@
+<!--          <textarea class='text-area' name="input-content" type="text" placeholder="这里输入通知标题" placeholder-class="holder" value="{{titlecontent}}" bindblur='gettitlecontent'></textarea>-->
+<view class="atext">
+<view wx:if='{{key=="zhujiemiantongzhi1"}}'>主界面通知1</view>
+<view wx:if="{{key=='zhujiemiantongzhi2'}}">主界面通知2</view>
+<view wx:if="{{key=='zhujiemiantongzhi3'}}">主界面通知3</view>
+<view wx:if="{{key=='ziiemiantongzhi1'}}">子界面通知1</view>
+<view wx:if="{{key=='zijiemiantongzhi2'}}">子界面通知2</view>
+<view wx:if="{{key=='zijiemiantongzhi3'}}">子界面通知3</view>
+</view>
+<view class="content">
+<form bindsubmit="formSubmit">
+<text>为保证显示效果，请上传336：750比例大小图片</text>
+    <view class="text-content">
+      <view class='text-area'>
+         <input  class='inputbox' type='text' placeholder="这里输入通知内容" value="{{neirongcontent}}" bindinput='getneirongcontent' auto-focus/>
+      </view>
+
+    </view>
+    <scroll-view class="image-group" scroll-x="true">
+      <block wx:for='{{images}}' wx:for-index='idx'>
+      <view>
+        <image src='{{images[idx]}}' mode='aspectFill' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+      </block>
+      
+    </scroll-view>
+    <view class='btn-func'>
+      <button class="btn-img" bindtap='chooseImage'>选择图片</button>
+      <button class="btn" formType='submit'>发布通知</button>
+      <!-- <image hidden=''></image> -->
+    </view>
+  </form>
+</view>

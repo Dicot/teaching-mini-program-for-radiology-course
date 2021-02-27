@@ -1,0 +1,71 @@
+
+<import src='../../modules/tabbar.wxml'/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+  
+<!--index.wxml-->
+<view  class="container">
+<view class="swiper-container">
+
+ <swiper class="swiperdot" indicator-dots='true'
+  autoplay='true' interval='5000' duration='1000'>
+ 
+    <swiper-item >
+  <image src="{{tongzhi0.photopath}}"  data-index="0" mode="widthFix"></image>
+    <view wx:if="{{tongzhi0.neirong}}"><text>【通知】{{tongzhi0.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi1.photopath}}"  data-index="1" mode="widthFix"></image>
+    <view wx:if="{{tongzhi1.neirong}}"><text>【通知】{{tongzhi1.neirong}}</text></view>
+    </swiper-item>
+    
+    <swiper-item>
+  <image src="{{tongzhi2.photopath}}"  data-index="2" mode="widthFix"></image>
+    <view wx:if="{{tongzhi2.neirong}}"><text>【通知】{{tongzhi2.neirong}}</text></view>
+    </swiper-item>
+
+</swiper>
+</view>
+<view class="modal-container">
+<modal id="modal" hidden="{{tongzhihidden}}" title="通知" confirm-text="确认" cancel-text="取消"         bindcancel="tongzhicancel" bindconfirm="tongzhiconfirm">
+  <text>{{title}}\n</text>     
+  
+   <text>{{neirong}}</text>
+   </modal>
+</view>
+<view class="button-container">
+<image class='img1' bindtap="ontapziliao" src="../../images/zhu1.png"></image>
+<image class='img2' bindtap="ontapdianxingbingli" src="../../images/zhu2.png"></image>
+<image class='img3' bindtap="ontapjianjie" src="../../images/zhu3.png"></image>
+<image class='img4' bindtap="ontapjiaoxuerukou" src="../../images/zhu4.png"></image>
+<text class="text1" bindtap="ontapziliao">影像图库</text>
+<text class="text2" bindtap="ontapdianxingbingli">典型病例</text>
+<text class="text3" bindtap="ontapjianjie">关于我们</text>
+<text class="text4" bindtap="ontapjiaoxuerukou">教学入口</text>
+</view>
+</view>
+
+<!--
+
+<view class="modal-container">
+<modal id="modal" hidden="{{jianjiehidden}}" title="" confirm-text="确认" cancel-text="取消"         bindcancel="jianjiecancel" bindconfirm="jianjieconfirm">
+  <button bindtap="yingxiangfangshe" >影像放射</button>
+    <button bindtap="keshijieshao" >科室介绍</button>
+   </modal>
+</view>
+
+
+
+
+
+
+   <view  class="modals">
+    <view class="mask" bindtap="hideModaljianjie" animation="{{animationMask}}"></view>
+    <view class="content bottom-pos" animation="{{animationData}}">
+    <button bindtap="yingxiangfangshe" >影像放射</button>
+    <button bindtap="keshijieshao" >科室介绍</button>
+     <button bindtap="hideModaljianjie" >取消</button>
+    </view>
+    </view>
+-->
+

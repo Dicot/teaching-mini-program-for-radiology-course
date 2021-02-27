@@ -1,0 +1,28 @@
+<view>
+<input type='text' placeholder="输入题目：{{texttigan}}"  bindinput='clicktigan' style="background-color: {{colora}};" focus="{{isfocus[0]}}"/>
+<text>\n</text>
+<view class="option">
+<input type='text' placeholder="输入选项A:"  bindinput='clicka' style="background-color: {{colora}};" focus="{{isfocus[1]}}"/>
+<text>\n</text>
+<input type='text' placeholder="输入选项B:"  bindinput='clickb' style="background-color: {{colora}};" focus="{{isfocus[2]}}"/>
+<text>\n</text>
+<input type='text' placeholder="输入选项C:"  bindinput='clickc' style="background-color: {{colora}};" focus="{{isfocus[3]}}"/>
+<text>\n</text>
+<input type='text' placeholder="输入选项D:"  bindinput='clickd' style="background-color: {{colora}};" focus="{{isfocus[4]}}"/>
+<text>\n</text>
+<input type='text' placeholder="输入正确选项,如A{{texttrueanswer}}"  bindinput='clicktrueanswer' style="background-color: {{colora}};" focus="{{isfocus[5]}}"/>
+</view>
+<block wx:for='{{fileList}}' wx:for-index='idx'>
+      <view>
+        <image src='{{fileList[idx]}}' mode='widthFix' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+</block>
+<text>\n</text>
+<text>\n</text>
+<button class="btn-img" bindtap='chooseImage'>选择图片</button>
+<button class="btn" bindtap='submit'>发布试题</button>
+</view>
+ <view >
+ <canvas  class='canvas' style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;top:{{canvasHeight*2}}px;" canvas-id="firstCanvas"></canvas>
+ </view>

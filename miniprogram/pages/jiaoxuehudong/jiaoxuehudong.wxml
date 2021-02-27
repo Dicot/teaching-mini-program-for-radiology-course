@@ -1,0 +1,34 @@
+ 
+<view  class='desc'> 
+<view wx:for="{{topics}}" wx:for-item="item" wx:for-index="index" wx:key="hudongtime">
+<button data-index="{{index}}" bindtap="changeToggle" class="li">{{currentPage}}-{{index+1}} {{item.hudongtime}} {{item.hudongname}}\n</button>
+<text decode="{{true}}" space="{{true}}" class="ui">{{item.hudongmiaosu}}</text>
+  <block wx:if="{{usershenfen=='教师'}}"><text class="hudongshanchu" bindtap='hudongshanchu' data-id="{{item._id}}" >删除</text></block>
+<view hidden='{{!selectedFlag[index]}}'>
+<block wx:if="{{item.photopath.length>0}}">
+<image mode="aspectFit"  src="{{item.photopath}}" bindtap="previewimgs" data-count='{{index}}' data-url='{{item.photopath}}'></image></block>
+<text>\n\n</text>
+<block wx:if="{{item.reply_name}}">
+<text decode="{{true}}" space="{{true}}">回复：\n</text>
+<text decode="{{true}}" space="{{true}}">
+{{item.reply_name}}  {{item.reply_time}}\n&nbsp;&nbsp;</text>
+<text>{{item.reply_miaosu}}</text>
+</block>
+<block wx:elif="{{usershenfen=='教师'}}">
+<input hidden='{{!selectedFlag[index]}}' data-shenfenid="{{item.shenfenid}}" data-id="{{item._id}}" type='text' placeholder="在这里输入回复"  bindinput='huifuinput' auto-focus/>
+<button hidden='{{!selectedFlag[index]}}' data-shenfenid="{{item.shenfenid}}" data-id="{{item._id}}" bindtap="huifutijiao">提交</button>
+</block>
+</view>
+
+<text>\n\n</text>
+</view>
+<modal id="modal" hidden="{{shanchuhidden}}" title="删除确认" confirm-text="确认" cancel-text="取消"         bindcancel="shanchuquxiao" bindconfirm="shanchuqueren">
+</modal>
+
+
+<button class='woyaotiwen' bindtap="ontaptiwen">我要发表</button>
+<button class='xiayiye' bindtap="ontapshangyiye">上一页</button>
+<button class='xiayiye' bindtap="ontapxiayiye">下一页</button>
+<input class="pageinput" type='number' placeholder="当前：第{{currentPage}}页" maxlength="2" bindinput='pageinput'  focus="{{isfocus}}"/>
+<button class="tiaozhuanyemian" bindtap="ontaptiaozhuan">跳转页面</button>
+</view>

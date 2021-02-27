@@ -1,0 +1,26 @@
+<!--miniprogram/pages/marry/marry.wxml-->
+<view class="content">
+  <form bindsubmit="formSubmit">
+    <text class="tishi">提示：仅单张传送，自动添加水印，如需传送多张图片，请联系管理员
+    上传至：{{mingcheng}}
+    </text>
+    <scroll-view class="image-group" scroll-x="true">
+      <block wx:for='{{fileList}}' wx:for-index='idx'>
+      <view>
+        <image src='{{fileList[idx]}}' mode='aspectFill' bindtap="previewImg"></image>
+        <icon type='clear' bindtap='removeImg'  data-index="{{idx}}" ></icon>
+      </view>
+      </block>
+      
+    </scroll-view>
+    <view class='btn-func'>
+      <button class="btn-img" bindtap='chooseImage'>选择图片</button>
+      <button class="btn" formType='submit'>发布</button>
+      <!-- <image hidden=''></image> -->
+    </view>
+  </form>
+
+</view>
+ <view >
+ <canvas  class='canvas' style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;top:{{canvasHeight*2}}px;" canvas-id="firstCanvas"></canvas>
+ </view>
